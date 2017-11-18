@@ -49,20 +49,16 @@ $( document ).ready(function() {
 			answer: 0
 		}
 		]}
-
-	var message = 'Game Over!';
-	
-
+ 
+    var number = 30;
+    $('#timeLeft').on('click', run);
 
     $(".startGame").on("click", function (){
-		$('.wrapper').show();
+		$('.gameBoard').show();
 		console.log('hello');
 
 		$(this).hide();
 	});
- 
-    var number = 30;
-    $('#timeLeft').on('click', run);
 
 
     function decrement(){
@@ -70,8 +66,6 @@ $( document ).ready(function() {
         $('#timeLeft').html('<h2>' + number + " seconds"+'</h2>');
         if (number === 0){
         stop();
-        $('#message').html('time up!');
-        checkAnswers();
         }
     }
 
@@ -81,17 +75,19 @@ $( document ).ready(function() {
     
     function stop(){
         clearInterval(counter);
+        var audio= document.getElementById("audio")
+        audio.play();
     }
 
     run();
 
-function formTemplate(data) {
-	var qString = "<form id='questionOne'>"+ data.question +"<br>";
-	var possibles = data.possibles;
+function formTemplate(delta) {
+	var qString = "<form id='questionOne'>"+ delta.question +"<br>";
+	var possibles = delta.possibles;
 	for (var i = 0; i < possibles.length; i++) {
 		var possible = possibles[i];
 		console.log(possible);
-		qString = qString + "<input type='radio' name='"+data.id+"' value="+ i +">"+possible;
+		qString = qString + "<input type='radio' name='"+delta.id+"' value="+ i +">"+ possible;
 
 	}
 	return qString + "</form>";
@@ -155,7 +151,7 @@ function checkAnswered(question){
 
 }
 
-	$('#doneButton').on('click', function() {
+	$('.btn').on('click', function() {
 	checkAnswers();
 	stop();
 	$("#messageDiv").html("Game Over!");

@@ -1,4 +1,4 @@
-button {
+.btn {
 	width: 10%;
 	height: 50px;
 	margin: 50%;
@@ -12,17 +12,21 @@ body {
 	background: url("../images/gameshow.jpg")
 }
  
-.titleScreen, .timer {
+.titleScreen, .timer, .message {
 	text-align: center;
 	color:#ffffff;
 	font-family:impact;
+}
+
+.message {
+	font-size:40px;
 }
 
 .timer {
 	font-size:30px;
 }
 
-.wrapper {
+.gameBoard {
 	margin: 197px;
 	width:70%;
 	border: solid 2px white;
@@ -33,5 +37,9 @@ body {
     top: 1%;
 }
 
-
-
+.results {
+	font-family:impact;
+	color:black;
+	font-size: 18px;
+	top:30%;
+}
