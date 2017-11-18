@@ -57,6 +57,8 @@ $( document ).ready(function() {
         $('#timeLeft').html('<h2>' + number + " seconds"+'</h2>');
         if (number === 0){
         stop();
+        $('.message').html('<h2>' + "Time is up" + '</h2>')
+        checkAnswers()
         }
     }
 
@@ -68,6 +70,7 @@ $( document ).ready(function() {
         clearInterval(counter);
         var audio= document.getElementById("audio")
         audio.play();
+
     }
 
     run();
@@ -77,7 +80,6 @@ function formTemplate(delta) {
 	var possibles = delta.possibles;
 	for (var i = 0; i < possibles.length; i++) {
 		var possible = possibles[i];
-		console.log(possible);
 		qString = qString + "<input type='radio' name='"+delta.id+"' value="+ i +">"+ possible;
 
 	}
