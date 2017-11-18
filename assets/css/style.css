@@ -1,10 +1,10 @@
 button {
 	width: 10%;
-	height: 40px;
+	height: 50px;
 	margin: 50%;
 	position: absolute;
-	top: 15%;
-  	left: 45%;
+	top: 10%;
+  	right: 25%;
 }
 
 
@@ -12,19 +12,26 @@ body {
 	background: url("../images/gameshow.jpg")
 }
  
-.titleScreen {
+.titleScreen, .timer {
 	text-align: center;
 	color:#ffffff;
 	font-family:impact;
 }
 
-.gameBoard {
+.timer {
+	font-size:30px;
+}
+
+.wrapper {
 	margin: 197px;
 	width:70%;
 	border: solid 2px white;
-	height:700px;
+	height:500px;
 	background-color: gold;
 	position: absolute;
     left: 0;
     top: 1%;
 }
+
+
+
