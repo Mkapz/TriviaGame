@@ -13,12 +13,12 @@ $( document ).ready(function() {
 			answer: 1
 		}, {
 			question: "The Cleveland Browns won the super bowl in what year?",
-			possibles: ["1967", "1955", "1948", "non of the above"],
+			possibles: ["1967", "1955", "1948", "none of the above"],
 			id: 'question-three',
 			answer: 3
 		}, {
 			question: "This man was CEO of the Standard Oil company in Cleveland Ohio till 1897?",
-			possibles: ["1801", "1810", "1799", "1796" ],
+			possibles: ["John Rockifeller", "Andrew Carnegie", "Willam Chase", "John Fitzgerald" ],
 			id: 'question-four',
 			answer: 3
 		}, {
@@ -38,7 +38,7 @@ $( document ).ready(function() {
 			id: 'question-seven',
 			answer: 1
 		}, {
-			question: 'What is the capital of Florida?',
+			question: 'Which Cleveland gangster took on the cleveland mafia in the 1970s?',
 			possibles: ["Al Capone", "John Nardi", "Danny Greene", "Eliot Ness"],
 			id: 'question-eight',
 			answer: 2
@@ -50,16 +50,7 @@ $( document ).ready(function() {
 		}
 		]}
  
-    var number = 30;
-    $('#timeLeft').on('click', run);
-
-    $(".startGame").on("click", function (){
-		$('.gameBoard').show();
-		console.log('hello');
-
-		$(this).hide();
-	});
-
+    var number = 60;
 
     function decrement(){
         number--;

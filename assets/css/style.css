@@ -24,6 +24,7 @@ body {
 
 .timer {
 	font-size:30px;
+	color:black;
 }
 
 .gameBoard {
@@ -40,6 +41,6 @@ body {
 .results {
 	font-family:impact;
 	color:black;
-	font-size: 18px;
-	top:30%;
+	font-size: 29px;
+	float:right;
 }
